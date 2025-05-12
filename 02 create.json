@@ -4,6 +4,26 @@ db.inventory.insertOne({
   tags: ['cotton'],
   size: { h: 28, w: 35.5, uom: 'cm' }
 });
+
+db.inventory.insertOne({
+ "maker": "Tata",
+ "model": "Nexon",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 1199,
+ "torque": "170 Nm"
+ },
+ "features": [
+ "Touchscreen",
+ "Reverse Camera",
+ "Bluetooth Connectivity"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ });
+
 //to insert one document
 
 //to insert multiple documents
@@ -28,3 +48,84 @@ db.inventory.insertMany( [
   { item: "sketchbook", qty: 80, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
   { item: "sketch pad", qty: 95, size: { h: 22.85, w: 30.5, uom: "cm" }, status: "A" }
 ] );
+
+
+
+db.inventory.insertMany(
+[
+ {
+ "maker": "Hyundai",
+ "model": "Creta",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1493,
+ "torque": "250 Nm"
+ },
+ "features": [
+ "Sunroof",
+ "Leather Seats",
+ "Wireless Charging",
+"Ventilated Seats",
+"Bluetooth"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Maruti Suzuki",
+ "model": "Baleno",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1197,
+ "torque": "113 Nm"
+ },
+ "features": [
+ "Projector Headlamps",
+ "Apple CarPlay",
+ "ABS"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ },
+ {
+ "maker": "Mahindra",
+ "model": "XUV500",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 2179,
+ "torque": "360 Nm"
+ },
+ "features": [
+ "All-Wheel Drive",
+ "Navigation System",
+ "Cruise Control"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Honda",
+ "model": "City",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1498,
+ "torque": "145 Nm"
+ },
+ "features": [
+ "Keyless Entry",
+ "Auto AC",
+ "Multi-angle Rearview Camera"
+ ],
+ "sunroof": false,
+ "airbags": 4
+ }
+]
+);
