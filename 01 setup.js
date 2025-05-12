@@ -1,5 +1,6 @@
 show dbs //show databases
 show collections //show collections
+use employees // to switch to database
 
 // WE WOULD BE LEARNING ABOUT CRUD Operations
 C- Create
