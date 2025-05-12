@@ -1,0 +1,38 @@
+// To check  find car which has all three (fuel type diesel and engine type  turbocharged and has sunroof)
+
+db.inventory.find(
+{
+$and:[
+    {"fuel_type":"Diesel"},
+    {"engine.type":"Turbocharged"},
+    {"sunroof":true}
+]
+}
+); 
+
+
+
+// To check  find car which has any two (fuel type diesel or engine type  turbocharged)
+
+db.inventory.find(
+{
+$or:[
+    {"fuel_type":"Diesel"},
+    {"engine.type":"Turbocharged"},
+    ]
+}
+); 
+
+
+
+
+// To check  find car which has neither (fuel type diesel nor engine type  turbocharged)
+
+db.inventory.find(
+{
+$nor:[
+    {"fuel_type":"Diesel"},
+    {"engine.type":"Turbocharged"},
+    ]
+}
+); 
